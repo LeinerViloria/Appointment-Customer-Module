@@ -1,4 +1,5 @@
 using Appointment.SDK.Backend.Configuration;
+using Customer.Module.Backend.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddGlobalConfiguration(builder.Configuration);
+builder.Services.AddGlobalConfiguration<CustomerContext>(builder.Configuration);
 
 var app = builder.Build();
 
