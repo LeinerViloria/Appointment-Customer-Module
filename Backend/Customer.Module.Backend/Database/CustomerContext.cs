@@ -6,4 +6,6 @@ namespace Customer.Module.Backend.Database;
 
 public class CustomerContext(DbContextOptions options) : StoreContext(options)
 {
+    public DbSet<Entities.Customer> Customers { get; set; }
+    public DbSet<Entities.Appointment> Appointments { get; set; }
 }

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\SDK\Appointment.SDK.Shared\Appointment.SDK.Shared.csproj" />
+    <ProjectReference Include="..\..\Configuration-Module\Shared\Configuration.Module.Shared.csproj" />
   </ItemGroup>  
 
 </Project>
