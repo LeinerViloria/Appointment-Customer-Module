@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\SDK\Appointment.SDK.Shared\Appointment.SDK.Shared.csproj" />
+  </ItemGroup>  
+
 </Project>
