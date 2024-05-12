@@ -28,8 +28,5 @@ public class Appointment : BaseEntity<int>
     public int RowidEmployee {get; set;}
     public Employee? Employee { get; set; }
 
-    [Required]
-    [ForeignKey("Service")]
-    public int RowidService {get; set;}
-    public Service? Service { get; set; }
+    public virtual ICollection<AppointmentDetail>? Services {get; set;}
 }
