@@ -4,7 +4,7 @@ using Appointment.SDK.Entities;
 
 namespace Customer.Entities;
 
-public class Customer : BaseCompany<int>
+public class Customer : BaseUser<int>
 {
     [Required]
     public string Id { get; set; } = null!;
@@ -13,8 +13,4 @@ public class Customer : BaseCompany<int>
     [Required]
     public string LastName { get; set; } = null!;
     public DateOnly? BirthDate { get; set; }
-    [Required]
-    [ForeignKey("User")]
-    public int RowidUser {get; set;}
-    public User? User { get; set; }
 }
