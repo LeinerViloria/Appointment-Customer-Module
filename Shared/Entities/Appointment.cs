@@ -15,6 +15,8 @@ public class Appointment : BaseEntity<int>
 
     [Required]
     public EnumAppointmentState State {get; set;} = EnumAppointmentState.Scheduled;
+    [Required]
+    public EnumPaymentState PaymentState {get; set;} = EnumPaymentState.Pending;
 
     [Required]
     [ForeignKey("Customer")]

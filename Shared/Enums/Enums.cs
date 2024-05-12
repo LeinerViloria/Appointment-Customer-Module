@@ -7,3 +7,9 @@ public enum EnumAppointmentState
     Attended,
     Expired
 }
+
+public enum EnumPaymentState{
+    Pending,
+    Paid,
+    Unpaid
+}
