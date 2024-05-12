@@ -9,7 +9,9 @@ namespace Customer.Entities;
 public class Appointment : BaseEntity<int>
 {
     [Required]
-    public DateTime AssignmentDate {get; set;}
+    public DateTime StartTime {get; set;}
+    [Required]
+    public DateTime EndTime {get; set;}
 
     [Required]
     public EnumAppointmentState State {get; set;} = EnumAppointmentState.Scheduled;
