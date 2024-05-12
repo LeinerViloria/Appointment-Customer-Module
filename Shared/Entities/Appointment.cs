@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Appointment.Globals.Enums;
 using Appointment.SDK.Entities;
 using Configuration.Entities;
 
@@ -11,7 +12,7 @@ public class Appointment : BaseEntity<int>
     public DateTime AssignmentDate {get; set;}
 
     [Required]
-    public bool Attended {get; set;}
+    public EnumAppointmentState State {get; set;} = EnumAppointmentState.Scheduled;
 
     [Required]
     [ForeignKey("Customer")]
@@ -22,4 +23,9 @@ public class Appointment : BaseEntity<int>
     [ForeignKey("Employee")]
     public int RowidEmployee {get; set;}
     public Employee? Employee { get; set; }
+
+    [Required]
+    [ForeignKey("Service")]
+    public int RowidService {get; set;}
+    public Service? Service { get; set; }
 }
