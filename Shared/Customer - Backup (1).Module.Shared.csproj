@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <VersionPrefix>1.0.1</VersionPrefix>
-    <PackageId>Appointment.$(AssemblyName)</PackageId>
+    <PackageId></PackageId>
   </PropertyGroup>
 
   <ItemGroup>
