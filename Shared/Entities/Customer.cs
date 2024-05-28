@@ -13,4 +13,9 @@ public class Customer : BaseUser<int>
     [Required]
     public string LastName { get; set; } = null!;
     public DateOnly? BirthDate { get; set; }
+
+    public override string ToString()
+    {
+        return $"({Id}) - {Name} {LastName}";
+    }
 }

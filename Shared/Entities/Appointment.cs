@@ -29,4 +29,9 @@ public class Appointment : BaseEntity<int>
     public Employee? Employee { get; set; }
 
     public virtual ICollection<AppointmentDetail>? Services {get; set;}
+
+    public override string ToString()
+    {
+        return $"({Rowid}) - Inicio: {StartTime} - Fin: {EndTime}";
+    }
 }

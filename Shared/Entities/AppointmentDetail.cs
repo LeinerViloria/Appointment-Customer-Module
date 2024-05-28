@@ -16,4 +16,9 @@ public class AppointmentDetail : BaseEntity<int>
     [ForeignKey("Service")]
     public int RowidService {get; set;}
     public Service? Service { get; set; }
+
+    public override string ToString()
+    {
+        return $"({Appointment?.Rowid}) - {Service?.Name}";
+    }
 }
