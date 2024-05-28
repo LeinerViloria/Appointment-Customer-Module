@@ -1,10 +1,9 @@
 
 using Appointment.SDK.Backend.Controllers;
-using Appointment.SDK.Backend.Validations;
 using Entities = Customer.Entities;
 
 namespace Appointment.Customer.Controllers;
 
-public class CustomerController(IServiceProvider serviceProvider) : StandardController<Entities.Customer, BaseControllerValidator<Entities.Customer>>(serviceProvider)
+public class CustomerController(IServiceProvider serviceProvider) : StandardController<Entities.Customer, CustomerValidator>(serviceProvider)
 {
 }
